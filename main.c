@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include "splash.h"
-#include "menu.h"
 #include "login.h"
+#include "menu.h"
 
 int main (void)
 {
-    header();
     return 0;
 }
