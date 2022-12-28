@@ -20,7 +20,7 @@ int main (void)
     welcome();
 
     printf("\n\n");
-    int e =0;
+    int e = 0;
     while (e <= 4)
     {
         printf("\t\t\t\t\t\tPress 1 to SIGN IN!\n");
@@ -32,19 +32,26 @@ int main (void)
         scanf("%d", &check);
 
         if(check == 1){
+            system("clear");
             login();
+            break;
         } else if(check == 2){
+            system("clear");
             signup();
+            break;
         } else if(check == 3){
             printf("\n\n\t\t\t\t\t\tExiting program!\n\n");
             exit(EXIT_SUCCESS);
         } else {
             system("clear");
-            printf("\t\t\t\t\t\tworng input!\n\t\t\t\t\t\t\ttry again....\n\n");
+            printf("\t\t\t\t\t\tWorng input!\n\t\t\t\t\t\t\ttry again....\n\n");
         }
     }
+
     
-    printf("\n\n");
+    system("clear");
+    
+    printf("\n");
     menu();
 
     return 0;
