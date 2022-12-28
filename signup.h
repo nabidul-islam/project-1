@@ -1,4 +1,4 @@
-signup() {
+void signup(void) {
     char first_name[20], 
     last_name[20],
     pass[100], 
@@ -12,17 +12,17 @@ signup() {
 
     printf("\t\t\t\t\t\tFirst Name : ");
     scanf("%s",&first_name);
-    
+
     printf("\t\t\t\t\t\tLast Name : ");
     scanf("%s", &last_name);
 
     printf("\t\t\t\t\t\tUser Name : ");
     scanf("%s", &user_name);
-    fprintf(log ," %s", user_name);
+    fprintf(log ,"%s ", user_name);
 
     printf("\t\t\t\t\t\tPassword : ");
     scanf("%s", &pass);
-    fprintf(log ," %s", pass);
+    fprintf(log ,"%s ", pass);
 
     fclose(log);
 
@@ -30,5 +30,5 @@ signup() {
     
     printf("\nRegistration Successfull!\n");
     printf("\nConfirming details.......\nWelcome, %s!\n\n", first_name);
-    login(user_name, pass);
+    login();
 }
