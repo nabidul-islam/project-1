@@ -44,8 +44,7 @@ int main (void)
         }
     }
     
-
-
+    printf("\n\n");
     menu();
 
     return 0;
