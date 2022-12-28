@@ -38,7 +38,6 @@ void login(void){
         if(strcmp(temp,check) == 0){
             printf("Login successfull\n");
             system("clear");
-            menu();
             break;
 
         } else {
