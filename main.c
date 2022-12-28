@@ -10,6 +10,8 @@ int main (void)
     system("clear");
     splash();
     sleep(5);
+    system("clear");
     login();
+    
     return 0;
 }
