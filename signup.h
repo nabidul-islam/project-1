@@ -12,11 +12,9 @@ signup() {
 
     printf("\t\t\t\t\t\tFirst Name : ");
     scanf("%s",&first_name);
-    fprintf(log ," %s", first_name);
-
+    
     printf("\t\t\t\t\t\tLast Name : ");
     scanf("%s", &last_name);
-    fprintf(log ," %s", last_name);
 
     printf("\t\t\t\t\t\tUser Name : ");
     scanf("%s", &user_name);
