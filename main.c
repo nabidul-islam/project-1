@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>  
 #include "splash.h"
 #include "welcome.h"
 #include "login.h"
 #include "signup.h"
 #include "menu.h"
 #include "submenu.h"
+
 
 
 int main (void)
