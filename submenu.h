@@ -1,31 +1,47 @@
 void submenu(void) {
     struct movie_tic_info m1;
     int movie_num;
-    printf("Select Date ");
+    printf("\t\t\t\t\t\t\t\tSelect Date \n\n");
 
     time_t t = time(NULL);
-    struct tm time = * localtime( & t);
-    //   printf("date - %d\n", time.tm_mday);  
-
+    struct tm time = * localtime( &t);
+    //   printf("date - %d\n", time.tm_mday);
     for (int i = time.tm_mday; i <= time.tm_mday; i++) {
         if (i <= 31) {
-            printf("\t%d ", time.tm_mday++);
+            printf("\t\t\t\t\t\t\t\t%d ", time.tm_mday++);
         } else {
             break;
         }
     }
-    printf("\n");
-    printf("Enter Date : ");
+    printf("\n\n");
+    printf("\t\t\t\t\t\t\tEnter Date : ");
     scanf("%d", &m1.movie_date);
+    system("clear");
+    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : Bashundhara Shopping Mall\n");
+    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d\n", m1.movie_date);
 
-    printf("Select Movie\n");
-    printf("1) Avatar: The Way of Water (3D)");
-    printf("2) Avatar: The Way of Water (2D)");
-    printf("3) Black Panther Wakanda Forever (2D)");
-    printf("4) Damal(2D)");
-    printf("5) Black Adam\n\n");
 
-    printf("Enter your Choice : ");
+
+
+
+
+    printf("\t\t\t\t\t\t\t\tSelect Movie\n\n\n");
+
+    printf("\t\t\t\t================================================================================\n");
+    printf("\t\t\t\t||\t1) Avatar: The Way of Water (3D)                                     ||\n");
+    printf("\t\t\t\t||\t                                                                     ||\n");
+    printf("\t\t\t\t||\t2) Avatar: The Way of Water (2D)                                     ||\n");
+    printf("\t\t\t\t||\t                                                                     ||\n");
+    printf("\t\t\t\t||\t3) Black Panther Wakanda Forever (2D)                                ||\n");
+    printf("\t\t\t\t||\t                                                                     ||\n");
+    printf("\t\t\t\t||\t4) Damal(2D)                                                         ||\n");
+    printf("\t\t\t\t||\t                                                                     ||\n");
+    printf("\t\t\t\t||\t5) Black Adam                                                        ||\n");
+    printf("\t\t\t\t||\t                                                                     ||\n");
+    printf("\t\t\t\t||\tPress 0 to exit the program!                                         ||\n");
+    printf("\t\t\t\t================================================================================\n\n");
+
+    printf("\t\t\t\tEnter your Choice : ");
     scanf("%d", &movie_num);
 
     if(movie_num == 1)
