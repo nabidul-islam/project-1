@@ -12,16 +12,16 @@ void login(void){
     FILE *log_check;
     log_check = fopen("check_user_pass.txt", "w");
     
-    printf("\t\t\t\t\t\t\t\tLOG IN\n");
+    printf("\t\t\t\t\t\t\t\t\tLOG IN\n");
     printf("\n\n");
 
-    printf("\t\t\t\t\t\tUser Name [ ");
+    printf("\t\t\t\t\t\t\tUser Name [ ");
     scanf(" %s", &user_name);
     fprintf(log_check ,"%s", user_name);
 
     printf("\n");
 
-    printf("\t\t\t\t\t\tPassword [ ");
+    printf("\t\t\t\t\t\t\tPassword [ ");
     scanf(" %s", &pass);
     fprintf(log_check ,"%s", pass);
     printf("\n");
@@ -42,7 +42,7 @@ void login(void){
 
         } else {
             system("clear");
-            printf("\t\t\t\t\t\tWrong Password or Username! \n\t\t\t\t\t\t\tPlease try again...\n\n");
+            printf("\t\t\t\t\t\t\tWrong Password or Username! \n\t\t\t\t\t\t\t\tPlease try again...\n\n");
             login();
             break;
         }
