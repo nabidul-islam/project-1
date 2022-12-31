@@ -1,7 +1,7 @@
 void login(void){
 
-    char user_name_check[100], 
-    pass_check[100];
+    char user_name[100], 
+    pass[100];
 
     FILE *log;
     log = fopen("login.txt", "r");
@@ -16,14 +16,14 @@ void login(void){
     printf("\n\n");
 
     printf("\t\t\t\t\t\tUser Name [ ");
-    scanf(" %s", &user_name_check);
-    fprintf(log_check ,"%s ", user_name_check);
+    scanf(" %s", &user_name);
+    fprintf(log_check ,"%s", user_name);
 
     printf("\n");
 
     printf("\t\t\t\t\t\tPassword [ ");
-    scanf(" %s", &pass_check);
-    fprintf(log_check ,"%s ", pass_check);
+    scanf(" %s", &pass);
+    fprintf(log_check ,"%s", pass);
     printf("\n");
 
     fclose(log_check);
@@ -35,7 +35,7 @@ void login(void){
 
     while (fopen("login.txt", "r"))
     {
-        if(strcmp(temp,check) == 0){
+        if(strcmp(temp,check) == 0 && strcmp(temp,check)==0){
             printf("Login successfull\n");
             system("clear");
             break;
