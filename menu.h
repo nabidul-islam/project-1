@@ -31,18 +31,23 @@ void menu(void){
     system("clear");
 
     if(n == 1){
-        printf("Bashundhara Shopping Mall, Panthapath\n");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Bashundhara Shopping Mall\n");
         submenu();
     } else if(n == 2){
-        printf("Shimanto Shambhar, Dhanmondi 2\n");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Shimanto Shambhar\n");
+        submenu();
     } else if(n == 3){
-        printf("Star Cineplex, SKS Tower, Mohakhali\n");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplex, SKS Tower\n");
+        submenu();
     } else if(n == 4){
-        printf("Star Cineplex, Sony Square\n");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplex, Sony Square\n");
+        submenu();
     } else if(n == 5){
-        printf("Star Cineplex, Bangabandhu Military Museum\n");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplex, BMM\n");
+        submenu();
     } else if(n == 6){
-        printf("Star Cineplax, Bali Arcade\n");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplax, Bali Arcade\n");
+        submenu();
     } else if(n == 0){
         printf("Exiting program!\n");
         exit(EXIT_SUCCESS);
