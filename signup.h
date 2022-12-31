@@ -1,34 +1,32 @@
 void signup(void) {
-    char first_name[20], 
-    last_name[20],
-    pass[100], 
-    user_name[100];
 
     FILE *log;
     log = fopen("login.txt", "w");
+    struct user_data l;
 
     
     printf("\t\t\t\t\t\t\t\tSIGN UP\n");
 
     printf("\t\t\t\t\t\tFirst Name : ");
-    scanf("%s",&first_name);
+    scanf("%s", &l.first_name);
 
     printf("\t\t\t\t\t\tLast Name : ");
-    scanf("%s", &last_name);
+    scanf("%s", &l.last_name);
 
     printf("\t\t\t\t\t\tUser Name : ");
-    scanf("%s", &user_name);
-    fprintf(log ,"%s ", user_name);
+    scanf("%s", &l.user_name);
+    fprintf(log, "%s", l.user_name);
 
     printf("\t\t\t\t\t\tPassword : ");
-    scanf("%s", &pass);
-    fprintf(log ,"%s ", pass);
-
+    scanf("%s", &l.pass);
+    fprintf(log, "%s", l.pass);
+    
     fclose(log);
 
     system("clear");
     
     printf("\nRegistration Successfull!\n");
-    printf("\nConfirming details.......\nWelcome, %s!\n\n", first_name);
+    printf("\nConfirming details.......\n");
+    sleep(2);
     login();
 }
