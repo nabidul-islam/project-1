@@ -2,7 +2,27 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <time.h>  
+#include <time.h>
+
+
+struct user_data
+{
+    char first_name[100];
+    char last_name[100];
+    char user_name[30];
+    char pass[20];
+
+};
+
+struct movie_tic_info
+{
+    char movie_name[100];
+    int movie_date;
+    char movie_hall[30];
+    char movie_time[20];
+};
+
+
 #include "splash.h"
 #include "welcome.h"
 #include "login.h"
