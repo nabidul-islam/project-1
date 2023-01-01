@@ -1,4 +1,7 @@
 void submenu(struct movie_tic_info m1) {
+
+    //TIME DATE 
+
     int movie_num, year, month;
     printf("\t\t\t\t\t\t\t\tSelect Date \n\n");
     
@@ -27,7 +30,7 @@ void submenu(struct movie_tic_info m1) {
     printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
     printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d/%d/%d\n", m1.movie_date, month , year);
 
-
+    // select movie part
 
     printf("\t\t\t\t\t\t\t\tSelect Movie\n\n\n");
 
