@@ -15,10 +15,13 @@ struct user_data
 
 struct movie_tic_info
 {
+    char movie_theatre[200];
     char movie_name[100];
-    int movie_date;
+    int  movie_date;
     char movie_hall[30];
     char movie_time[20];
+    char movie_seat_type[30];
+    char seats[10];
 };
 
 #include "splash.h"
@@ -27,6 +30,7 @@ struct movie_tic_info
 #include "signup.h"
 #include "menu.h"
 #include "submenu.h"
+#include "submenu_footer.h"
 
 
 
