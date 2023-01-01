@@ -1,27 +1,31 @@
-void submenu(void) {
-    struct movie_tic_info m1;
-    int movie_num;
+void submenu(struct movie_tic_info m1) {
+    int movie_num, year, month;
     printf("\t\t\t\t\t\t\t\tSelect Date \n\n");
-
+    
     time_t t = time(NULL);
     struct tm time = * localtime( &t);
-    //   printf("date - %d\n", time.tm_mday);
+    month = time.tm_mon + 1;
+    year = time.tm_year + 1900;
+    printf("\t\t\t\t\t\t");
     for (int i = time.tm_mday; i <= time.tm_mday; i++) {
         if (i <= 31) {
-            printf("\t\t\t\t\t\t\t\t%d ", time.tm_mday++);
+            printf("%5d", time.tm_mday++);
         } else {
             break;
+        }
+        if (i == 7 || i == 14 || i == 21 || i == 28){
+            printf("\n");
+            printf("\t\t\t\t\t\t");
         }
     }
     printf("\n\n");
     printf("\t\t\t\t\t\t\tEnter Date : ");
     scanf("%d", &m1.movie_date);
+
+
     system("clear");
-    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : Bashundhara Shopping Mall\n");
-    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d\n", m1.movie_date);
-
-
-
+    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
+    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d/%d/%d\n", m1.movie_date, month , year);
 
 
 
@@ -44,48 +48,55 @@ void submenu(void) {
     printf("\t\t\t\tEnter your Choice : ");
     scanf("%d", &movie_num);
 
-    if(movie_num == 1)
-        printf("Avatar: The Way of Water (3D)");
-    else if(movie_num == 2)
-        printf("Avatar: The Way of Water (2D)");
-    else if(movie_num == 3)
-        printf("Black Panther Wakanda Forever (2D)");
-    else if(movie_num == 4)
-        printf("Damal(2D)");
-    else if(movie_num == 5)
-        printf("Black Adam\n\n");
+    if(movie_num == 1){
+        system("clear");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d/%d/%d\n", m1.movie_date, month , year);
+        strcpy(m1.movie_name, "Avatar: The Way of Water (3D)");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : %s\n", m1.movie_name);
+        submenu_footer(m1);
+    }    
+    else if(movie_num == 2){
+        system("clear");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d\n", m1.movie_date);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : Avatar: The Way of Water (2D)\n");
+        strcpy(m1.movie_name, "Avatar: The Way of Water (2D)");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : %s\n", m1.movie_name);
+        submenu_footer(m1);
+    }
+    else if(movie_num == 3){
+        system("clear");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d\n", m1.movie_date);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : Black Panther Wakanda Forever (2D)\n");
+        strcpy(m1.movie_name, "Black Panther Wakanda Forever (2D)");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : %s\n", m1.movie_name);
+        submenu_footer(m1);
+    }   
+    else if(movie_num == 4){
+        system("clear");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d\n", m1.movie_date);
+        strcpy(m1.movie_name, "Damal(2D)");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : %s\n", m1.movie_name);
+        submenu_footer(m1);
+    }
+    else if(movie_num == 5){
+        system("clear");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre : %s\n", m1.movie_theatre);
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate    : %d\n", m1.movie_date);
+        strcpy(m1.movie_name, "Avatar: Black Adam");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMovie   : %s\n", m1.movie_name);
+        submenu_footer(m1);
+    }
     else {
         printf("Wrong input!\n");
         sleep(2);
         system("clear");
-        submenu();
+        submenu(m1);
     }
-    
-    printf("Select Hall\n");
-    printf("Hall 1");
-    printf("Hall 2");
-    printf("Hall 3");
-
-    printf("Select Show Time");
-
-    char seat_type[10];
-
-    printf("Select Seat Type\n\n");
-    printf("Regular\n BDT 400 Tk\n");
-    printf("Premium\n BDT 450 Tk\n");
-    printf("Enter your choose : ");
-    scanf("%s", seat_type);
 
     printf("\n");
-
-    int tic_quan;
-
-    printf("Ticket Quantity\n Max 10 Tickets\n");
-    scanf("%d", &tic_quan);
-
-    printf("Select Seats\n\n");
     
-    
-
-
 }
