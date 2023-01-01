@@ -1,4 +1,5 @@
-void menu(void){
+void menu(){
+    struct movie_tic_info m1;
     int n;
     printf("\t\t\t\t\t\t\t\tSelect Your Theatre\n\n\n");
 
@@ -31,23 +32,29 @@ void menu(void){
     system("clear");
 
     if(n == 1){
-        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Bashundhara Shopping Mall\n");
-        submenu();
+        strcpy(m1.movie_theatre, "Bashundhara Shopping Mall");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: %s\n", m1.movie_theatre);
+        submenu(m1);
     } else if(n == 2){
-        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Shimanto Shambhar\n");
-        submenu();
+        strcpy(m1.movie_theatre, "Shimanto Shambhar");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: %s\n", m1.movie_theatre);
+        submenu(m1);
     } else if(n == 3){
-        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplex, SKS Tower\n");
-        submenu();
+        strcpy(m1.movie_theatre, "Star Cineplex, SKS Tower");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: %s\n", m1.movie_theatre);
+        submenu(m1);
     } else if(n == 4){
-        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplex, Sony Square\n");
-        submenu();
+        strcpy(m1.movie_theatre, "Star Cineplex, Sony Square");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: %s\n", m1.movie_theatre);
+        submenu(m1);
     } else if(n == 5){
-        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplex, BMM\n");
-        submenu();
+        strcpy(m1.movie_theatre, "Star Cineplex, BMM");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: %s\n", m1.movie_theatre);
+        submenu(m1);
     } else if(n == 6){
-        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: Star Cineplax, Bali Arcade\n");
-        submenu();
+        strcpy(m1.movie_theatre, "Star Cineplax, Bali Arcade");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t\tTheatre: %s\n", m1.movie_theatre);
+        submenu(m1);
     } else if(n == 0){
         printf("Exiting program!\n");
         exit(EXIT_SUCCESS);
