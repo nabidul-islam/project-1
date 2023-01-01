@@ -1,13 +1,15 @@
 
 void submenu_footer(struct movie_tic_info m1){
+
+    // select hall part
     
-    printf("\t\t\t\t\t\t\t\tSelect Hall\n\n");
+    printf("\t\t\t\t\t\t\tSelect Hall\n\n");
 
     
     printf("\t\t\t\t\t\t\t1) Hall 1\n");
     printf("\t\t\t\t\t\t\t2) Hall 2\n");
-    printf("\t\t\t\t\t\t\t3) Hall 3\n");
-    printf("\t\t\t\t\t\tPress 0 to exit the program! \n");
+    printf("\t\t\t\t\t\t\t3) Hall 3\n\n");
+    printf("\t\t\t\t\t\tPress 0 to exit the program! \n\n");
 
     int movie_hall_n;
     printf("\t\t\t\t\t\t\tEnter your Choice : ");
@@ -51,13 +53,13 @@ void submenu_footer(struct movie_tic_info m1){
         submenu_footer(m1);
     }
     
+    // select show time part
 
-
-    printf("\t\t\t\t\t\t\t\tSelect Show Time\n");
-    printf("\t\t\t\t\t\t\t\t1) 11:10 AM\n");
-    printf("\t\t\t\t\t\t\t\t2) 03:15 PM\n");
-    printf("\t\t\t\t\t\t\t\t3) 07:00 PM\n");
-    printf("\t\t\t\t\t\tPress 0 to exit the program! \n");
+    printf("\t\t\t\t\t\t\tSelect Show Time\n\n");
+    printf("\t\t\t\t\t\t\t1) 11:10 AM\n");
+    printf("\t\t\t\t\t\t\t2) 03:15 PM\n");
+    printf("\t\t\t\t\t\t\t3) 07:00 PM\n\n");
+    printf("\t\t\t\t\t\tPress 0 to exit the program! \n\n");
 
 
     int show_time;
@@ -107,14 +109,16 @@ void submenu_footer(struct movie_tic_info m1){
         submenu_footer(m1);
     }
 
+    // select seat type part
+
     int seat_type;
 
     printf("\t\t\t\t\t\t\t\tSelect Seat Type\n\n");
 
-    printf("\t\t\t\t\t\t\t1) Regular\n  BDT 400 Tk\n");
-    printf("\t\t\t\t\t\t\t2) Premium\n BDT 450 Tk\n");
+    printf("\t\t\t\t\t\t\t1) Regular  BDT 400 Tk\n");
+    printf("\t\t\t\t\t\t\t2) Premium BDT 450 Tk\n\n");
+    printf("\t\t\t\t\t\tPress 0 to exit the program! \n\n");
     printf("\t\t\t\t\t\t\tEnter your choose : ");
-    printf("\t\t\t\t\t\tPress 0 to exit the program! \n");
 
     scanf("%d", &seat_type);
 
@@ -154,17 +158,19 @@ void submenu_footer(struct movie_tic_info m1){
 
     printf("\n");
 
+    // ticket quantity
+
     int tic_quan;
 
     printf("\t\t\t\t\t\t\t\tTicket Quantity\n Max 10 Tickets\n");
-    printf("Enter Quantity : ");
+    printf("\t\t\t\t\t\t\tEnter Quantity : ");
     scanf("%d", &tic_quan);
 
     system("clear");
 
     // Select Seats part
 
-    printf("\t\t\t\t\t\t\t\t\tSelect Seats\n\n");
+    printf("\t\t\t\t\t\t\t\tSelect Seats\n\n");
     printf("\t\t\t\t==============================================================================\n");
     printf("\t\t\t\t||-------------------------------Premium---------------------------------||\n");
     printf("\t\t\t\t||[n16][n15][n14][n13][n12][n11][n10][n9][n8][n7][n6][n5][n4][n3][n2][n1]||\n");
@@ -186,7 +192,7 @@ void submenu_footer(struct movie_tic_info m1){
 
     if(seat_type == 1){
         printf("\t\t\t\tSelect from regular seats.\n");
-        printf("\t\t\t\tYou select %d Ticket, \n\t\t\t\t\tEnter %d Seats.\n", tic_quan);
+        printf("\t\t\t\tYou select %d Ticket, \n\t\t\t\t\tEnter %d Seats.\n", tic_quan, tic_quan);
         printf("\t\t\t\tEnter your choice : ");
         scanf("%s", m1.seats);
     }
@@ -199,22 +205,24 @@ void submenu_footer(struct movie_tic_info m1){
     printf("\n\n");
 
     printf("\t\t\t\t\t\t\t Name   : ");
-    scanf("%s", &name);
+    scanf("%s", name);
     printf("\n");
     printf("\t\t\t\t\t\t\t Number : ");
-    scanf("%s", &number);
+    scanf("%s", number);
 
-    printf("\n");
+    printf("\n\n");
     printf("Plase wait!!\n");
     printf("Confirming details.......\n");
     sleep(2);
     
     system("clear");
 
+    // Tickets Summary part
+
     printf("\t\t\t\t\t\t\t\tTickets Summary\n\n\n");
     printf("\t\t\t\t===================================================\n");
-    printf("\t\t\t\tName    : %s", name);
-    printf("\t\t\t\tNumber  : %s", number);
+    printf("\t\t\t\tName    : %s\n", name);
+    printf("\t\t\t\tNumber  : %s\n", number);
     printf("\t\t\t\tTheatre : %s\n", m1.movie_theatre);
     printf("\t\t\t\tDate    :\n", m1.movie_date);
     printf("\t\t\t\tMovie   : %s\n", m1.movie_name);
