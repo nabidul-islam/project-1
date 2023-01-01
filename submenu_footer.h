@@ -4,7 +4,6 @@ void submenu_footer(struct movie_tic_info m1){
     // select hall part
     
     printf("\t\t\t\t\t\t\tSelect Hall\n\n");
-
     
     printf("\t\t\t\t\t\t\t1) Hall 1\n");
     printf("\t\t\t\t\t\t\t2) Hall 2\n");
@@ -162,7 +161,7 @@ void submenu_footer(struct movie_tic_info m1){
 
     int tic_quan;
 
-    printf("\t\t\t\t\t\t\t\tTicket Quantity\n Max 10 Tickets\n");
+    printf("\t\t\t\t\t\t\t\tTicket Quantity\n\t\t\t\t\t\t\t\t Max 10 Tickets\n");
     printf("\t\t\t\t\t\t\tEnter Quantity : ");
     scanf("%d", &tic_quan);
 
@@ -238,6 +237,7 @@ void submenu_footer(struct movie_tic_info m1){
     printf("Type 2 to cencel the ticket.\n");
     printf("Type 0 to Exit the program!\n");
 
+    printf("Enter your choice : ");
     scanf("%d", &suma);
 
     if (suma == 1)
