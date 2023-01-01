@@ -1,6 +1,9 @@
 
 void submenu_footer(struct movie_tic_info m1){
 
+    FILE *summary;
+    summary = fopen("ticket_summary.txt", "w");
+
     // select hall part
     
     printf("\t\t\t\t\t\t\tSelect Hall\n\n");
@@ -232,6 +235,18 @@ void submenu_footer(struct movie_tic_info m1){
     printf("\t\t\t\tSeats : %s\n", m1.seats);
     printf("\t\t\t\t===================================================\n\n");
 
+
+    fprintf(summary ,"Name : %s\n", name);
+    fprintf(summary ,"Number : %s\n", number);
+    fprintf(summary ,"Theatre : %s\n", m1.movie_theatre);
+    fprintf(summary ,"Date : %d\n", m1.movie_date);
+    fprintf(summary ,"Movie : %s\n", m1.movie_name);
+    fprintf(summary ,"Hall : %s\n", m1.movie_hall);
+    fprintf(summary ,"Time : %s\n", m1.movie_time);
+    fprintf(summary ,"Seat Type : %s\n", m1.movie_seat_type);
+    fprintf(summary ,"Ticket Quantity : %d\n", tic_quan);
+    fprintf(summary ,"Seats : %s\n", m1.seats);
+    
     int suma;
     printf("Type 1 to comfirm your tictets.\n");
     printf("Type 2 to cencel the ticket.\n");
