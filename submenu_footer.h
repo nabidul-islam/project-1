@@ -197,6 +197,11 @@ void submenu_footer(struct movie_tic_info m1){
         printf("\t\t\t\tYou select %d Ticket, \n\t\t\t\t\tEnter %d Seats.\n", tic_quan, tic_quan);
         printf("\t\t\t\tEnter your choice : ");
         scanf("%s", m1.seats);
+    } else if(seat_type == 2){
+        printf("\t\t\t\tSelect from regular seats.\n");
+        printf("\t\t\t\tYou select %d Ticket, \n\t\t\t\t\tEnter %d Seats.\n", tic_quan, tic_quan);
+        printf("\t\t\t\tEnter your choice : ");
+        scanf("%s", m1.seats);
     }
 
     system("clear");
