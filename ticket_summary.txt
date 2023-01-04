@@ -2,9 +2,9 @@ Name : rafi
 Number : 01831808214
 Theatre : Bashundhara Shopping Mall
 Date : 2
-Movie : Avatar: The Way of Water (2D)
+Movie : Avatar: The Way of Water (3D)
 Hall : Hall 1
 Time : 03:15 PM
-Seat Type : Regular
+Seat Type : Premium
 Ticket Quantity : 1
-Seats : h10
+Seats : m12
